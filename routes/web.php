@@ -30,6 +30,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/task', [TaskController::class, 'index'])->name('task.index');
+    Route::get('/task/create', [TaskController::class, 'createTask'])->name('task.create');
+    Route::post('/task/create', [TaskController::class, 'SaveTask'])->name('task.store');
+
+
     Route::get('/customer', [CustomerController::class, 'index'])->name('customer.index');
 });
 

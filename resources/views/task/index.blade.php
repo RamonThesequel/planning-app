@@ -1,5 +1,6 @@
 @extends('dashboard')
 
 @section('content')
-    <div class="">Task 2</div>
+    <div class="">Overzicht taken</div>
+   
 @endsection
