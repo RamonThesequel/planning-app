@@ -37,6 +37,15 @@
             <label>Description</label>
             <textarea type="text" class="form-control" name="description" id="description"></textarea>
         </div>
+
+        <div class="form-group">
+            <label>User</label>
+            <select name="user_id[]" id="user_id" multiple>
+                @foreach ( $users as $name => $id )
+                    <option value="{{ $id }}">{{ $name }}</option>
+                @endforeach
+            </select>
+        </div>
         {{-- <div class="form-group">
             <label>Message</label>
             <textarea class="form-control" name="message" id="message" rows="4"></textarea>
